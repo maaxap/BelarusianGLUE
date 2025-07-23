@@ -1,0 +1,9 @@
+task: belacola_in_domain_zero_shot_be
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: belacola_in_domain
+include: "../_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "Ваша задача – вызначыць, ці з’яўляецца сказ прымальным. Выберыце адказ '1', калі вы лічыце, што ў гэтым сказе няма памылак і ён гучыць натуральна (так мог бы сказаць носьбіт беларускай мовы), інакш адкажыце '0'.\n\nСказ: {{ sentence }}\n\nАдказ:"
+doc_to_decontamination_query: "{{ sentence }}"
+

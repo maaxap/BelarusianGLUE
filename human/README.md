@@ -1,0 +1,5 @@
+- Requirements: `pip install streamlit requests`
+- Run: `python3 -m streamlit run human_baseline_labeling_ui.py`
+- Open in browser: `http://localhost:8501/?id=1c4ca4238a0b9238`
+- The available IDs are: `1c4ca4238a0b9238`, `2c81e728d9d4c2f6`, `3eccbc87e4b5ce2f`, `4a87ff679a2f3e71`, `5e4da3b7fbbce234` (unique ID for each labeler)
+- The backend link removed for anonymization. Using this version of the labeling UI, you cannot send your responses to the database, but in all other respects it is the same as described in section 4.1.

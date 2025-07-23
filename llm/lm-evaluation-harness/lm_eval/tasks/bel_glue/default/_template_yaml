@@ -1,0 +1,12 @@
+output_type: multiple_choice
+test_split: test
+doc_to_target: label
+doc_to_choice: ["0", "1"]
+fewshot_split: validation
+fewshot_config:
+  sampler: first_n
+should_decontaminate: true
+metric_list:
+  - metric: f1
+  - metric: acc
+  - metric: mcc

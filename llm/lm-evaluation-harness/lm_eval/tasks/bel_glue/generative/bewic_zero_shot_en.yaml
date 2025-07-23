@@ -1,0 +1,8 @@
+task: bewic_generative_zero_shot_en
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: bewic
+include: "_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "Below are pairs of sentences in which a certain word appears. Your task is to determine whether this word is used in the same or in different meanings as another word in the pair. If you feel that neither answer is correct, choose the one that fits better. Choose '1' if the sentences contain the same or very similar meanings of the word. Choose '0' if the sentences contain completely different meanings (words can be considered homonyms).\n\nWord: {{ word }}\nSentence 1: {{ sentence1 }}\nSentence 2: {{ sentence2 }}\nAnswer:"
+doc_to_decontamination_query: "{{ sentence1 }} {{ sentence2 }}"

@@ -1,0 +1,8 @@
+task: bewsc_generative_zero_shot_en
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: bewsc_as_wnli
+include: "_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "Below are pairs of sentences: the first sentence contains a pronoun (e.g., *she*), and the second sentence contains a definite noun to which the pronoun refers. Your task is to determine whether the pronoun and the noun are correctly matched. Choose '1' if the second sentence follows from the first one (the noun and the pronoun are correctly related). Choose '0' if the second sentence does not follow from the first one (the noun and the pronoun are incorrectly related). If you feel that neither answer is correct, choose the one that is more appropriate. Answer with a single number.\n\nSentence 1: {{ sentence1 }}\nSentence 2: {{ sentence2 }}\nAnswer:"
+doc_to_decontamination_query: "{{ sentence1 }} {{ sentence2 }}"

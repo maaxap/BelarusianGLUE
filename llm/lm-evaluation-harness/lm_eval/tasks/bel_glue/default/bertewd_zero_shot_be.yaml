@@ -1,0 +1,8 @@
+task: bertewd_zero_shot_be
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: bertewd
+include: "_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "Перад вамі пары сказаў. Ваша задача – вызначыць, ці выводзіцца другі сказ з першага. Выберыце адказ '1', калі другі сказ – гэта вывад з першага, інакш адкажыце '0'.\n\nСказ 1: {{ text }}\n\nСказ 2: {{ hypothesis }}.\n\nАдказ:"
+doc_to_decontamination_query: "{{ text }} {{ hypothesis }}"

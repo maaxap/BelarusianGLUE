@@ -1,0 +1,9 @@
+task: belacola_in_domain_few_shot_en
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: belacola_in_domain
+include: "../_template_yaml"
+num_fewshot: 10
+test_split: test
+doc_to_text: "Passage: {{ sentence }}\nQuestion: Is the passage above linguistically acceptable? Output a single number: '1' if yes, '0' otherwise.\nAnswer:"
+doc_to_decontamination_query: "{{ sentence }}"
+

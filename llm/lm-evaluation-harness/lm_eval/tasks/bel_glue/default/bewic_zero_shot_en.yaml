@@ -1,0 +1,9 @@
+task: bewic_zero_shot_en
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: bewic
+include: "_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "Sentence 1: {{ sentence1 }}\nSentence 2: {{ sentence2 }}\nQuestion: Is the word \"{{ word }}\" used in the same way in the two sentences above? Output a single number: '1' if yes, '0' if not.\nAnswer:"
+doc_to_decontamination_query: "{{ sentence1 }} {{ sentence2 }}"
+

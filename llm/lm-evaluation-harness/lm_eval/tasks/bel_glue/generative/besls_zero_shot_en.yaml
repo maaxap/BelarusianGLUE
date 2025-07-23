@@ -1,0 +1,8 @@
+task: besls_generative_zero_shot_en
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: besls
+include: "_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "The task is to evaluate the sentiment of the sentence. There may be mistakes in the sentences, ignore them. If you think that none of the answers are correct, choose the one that fits better. Choose '1' if you think the sentence expresses a positive emotion or opinion. Choose '0' if you think the sentence expresses a negative emotion or opinion.\n\nSentence: {{ sentence }}\nAnswer:"
+doc_to_decontamination_query: "{{ sentence }}"
