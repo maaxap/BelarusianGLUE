@@ -1,0 +1,9 @@
+task: bewic_zero_shot_be
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: bewic
+include: "_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "Перад вамі – пары сказаў, у якіх сустракаецца пэўнае слова. Ваша задача – вызначыць, ці ўжываецца гэтае слова ў пары ў аднолькавых ці ў розных значэннях. Выберыце адказ '1', калі ў сказах прадстаўлена адно ці вельмі блізкія значэнні слова, інакш адкажыце '0'.\n\nСказ 1: {{ sentence1 }}\n\nСказ 2: {{ sentence2 }}\n\nСлова: \"{{ word }}\"\n\nАдказ:"
+doc_to_decontamination_query: "{{ sentence1 }} {{ sentence2 }}"
+

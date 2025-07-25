@@ -1,0 +1,8 @@
+task: besls_generative_zero_shot_be
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: besls
+include: "_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "Ваша задача – ацаніць настрой сказа. У сказах магчымыя памылкі, не звяртайце на іх увагу. Калі вам падаецца, што ніводны адказ не з’яўляецца правільным, выберыце той, што падыходзіць больш. Выберыце адказ '1', калі лічыце, што сказ выражае станоўчую эмоцыю або меркаванне. Выберыце адказ '0', калі лічыце, што сказ выражае адмоўную эмоцыю або меркаванне.\n\nСказ: {{ sentence }}\nАдказ:"
+doc_to_decontamination_query: "{{ sentence }}"

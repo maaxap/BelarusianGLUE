@@ -1,0 +1,8 @@
+task: belacola_in_domain_generative_few_shot_en
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: belacola_in_domain
+include: "../_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "The task is to determine whether the sentence is linguistically acceptable. Choose answer '1' if you think that there are no mistakes in this sentence and it sounds natural (so a native speaker of the Belarusian language could say it). Choose answer '0' if you think that there are mistakes in this sentence and/or it sounds unnatural (so a native speaker of the Belarusian language would hardly say it). If you think that none of the answers is correct, choose the one that fits better.\n\nExamples:\n\nSentence: Алесь заўважыў на дрэве незвычайных птушак.\nAnswer: 1\n\nSentence: Я ніколі ў гэтай хаце не быў.\nAnswer: 1\n\nSentence: Недапушчальна, каб пра гэта ведалі іншыя.\nAnswer: 1\n\nSentence: На сустрэчу былі запрошаны беларускія, польскія і народныя пісьменнікі.\nAnswer: 0\n\nSentence: Яны лічылі яго таленавітымі.\nAnswer: 0\n\nSentence: Яго напарнік штось буркнуў, а важны дакумент.\nAnswer: 0\n\nSentence: Яму зрабілі прамыванне страўніка.\nAnswer: 1\n\nSentence: Мне тады споўнілася васямнаццаць, і я адчуваў сябе дужа дарослым, разумным і гаспадарчым.\nAnswer: 0\n\nSentence: У вады ёсць кісларод.\nAnswer: 0\n\nSentence: Яна глядзелася ў люстэрка.\nAnswer: 1\n\nSentence: У кожнага народа, у кожнай краіне ёсць куточкі, якія з’яўляюцца асобымі, з’яўляюцца духоўнымі сімваламі.\nAnswer: 1\n\nNow, sentence for evaluation.\n\nSentence: {{ sentence }}\n\nAnswer:"
+doc_to_decontamination_query: "{{ sentence }}"

@@ -1,0 +1,8 @@
+task: belacola_in_domain_generative_zero_shot_en
+dataset_path: maaxap/BelarusianGLUE
+dataset_name: belacola_in_domain
+include: "../_template_yaml"
+num_fewshot: 0
+test_split: test
+doc_to_text: "The task is to determine whether the sentence is linguistically acceptable. Choose answer '1' if you think that there are no mistakes in this sentence and it sounds natural (so a native speaker of the Belarusian language could say it). Choose answer '0' if you think that there are mistakes in this sentence and/or it sounds unnatural (so a native speaker of the Belarusian language would hardly say it). If you think that none of the answers is correct, choose the one that fits better.\n\nSentence: {{ sentence }}\n\nAnswer:"
+doc_to_decontamination_query: "{{ sentence }}"

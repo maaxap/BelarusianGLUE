@@ -1,0 +1,22 @@
+output_type: generate_until
+generation_kwargs:
+  temperature: 0.0
+  until:
+    - "\n\nHuman:"
+doc_to_target: label
+test_split: test
+fewshot_split: validation
+fewshot_config:
+  sampler: first_n
+should_decontaminate: true
+filter_list:
+  - name: "score-first"
+    filter:
+      - function: "take_first"
+      - function: "cast_to_dtype"
+        dtype: int
+      - function: "take_first"
+metric_list:
+  - metric: f1
+  - metric: mcc
+  - metric: exact_match
